@@ -1,4 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-ReactDOM.render(<h1>Hello Woald</h1>, document.getElementById("app"));
+import Home from "./pages/Home";
+
+ReactDOM.render(
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Home} />
+    </Switch>
+  </BrowserRouter>,
+  document.getElementById("app")
+);

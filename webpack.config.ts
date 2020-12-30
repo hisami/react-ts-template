@@ -1,10 +1,9 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import { CleanWebpackPlugin } from "clean-webpack-plugin";
 
 module.exports = {
   mode: "development",
 
-  // メインとなるJavaScriptファイル（エントリーポイント）
   entry: "./src/index.tsx",
   devServer: {
     contentBase: `dist`,
@@ -21,23 +20,18 @@ module.exports = {
   ],
   // ファイルの出力設定
   output: {
-    //  出力ファイルのディレクトリ名
     path: `${__dirname}/dist`,
-    // 出力ファイル名
     filename: "bundle.js",
   },
   devtool: "source-map",
   module: {
     rules: [
       {
-        // 拡張子 .ts もしくは .tsx の場合
         test: /\.tsx?$/,
-        // TypeScript をコンパイルする
         use: "ts-loader",
       },
     ],
   },
-  // import 文で .ts や .tsx ファイルを解決するため
   resolve: {
     alias: {
       "@": `${__dirname}/src`,

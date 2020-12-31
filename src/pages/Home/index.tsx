@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { css } from "@emotion/css";
 import Button from "@material-ui/core/Button";
 
+import { User } from "@Types/user";
 import { useUser } from "@Hooks/useUser";
 
 /*
@@ -19,9 +20,9 @@ export const HomeContainer: React.FC = () => {
   return <Home userList={userList} />;
 };
 
-interface HomeProps {
-  userList: string[];
-}
+type HomeProps = {
+  userList: User[];
+};
 
 const Home: React.FC<HomeProps> = ({ userList }: HomeProps) => {
   console.log(userList);

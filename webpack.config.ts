@@ -37,6 +37,7 @@ module.exports = {
       "@": `${__dirname}/src`,
       "@Hooks": `${__dirname}/src/hooks`,
       "@Pages": `${__dirname}/src/pages`,
+      "@Types": `${__dirname}/src/types`,
     },
     extensions: [".ts", ".tsx", ".js", ".json"],
   },

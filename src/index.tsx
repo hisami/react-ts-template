@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 
-import { HomeContainer } from "@pages/Home";
+import { HomeContainer } from "@Pages/Home";
 
 ReactDOM.render(
   <RecoilRoot>

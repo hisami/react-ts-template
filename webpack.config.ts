@@ -35,8 +35,8 @@ module.exports = {
   resolve: {
     alias: {
       "@": `${__dirname}/src`,
-      "@hooks": `${__dirname}/src/hooks`,
-      "@pages": `${__dirname}/src/pages`,
+      "@Hooks": `${__dirname}/src/hooks`,
+      "@Pages": `${__dirname}/src/pages`,
     },
     extensions: [".ts", ".tsx", ".js", ".json"],
   },

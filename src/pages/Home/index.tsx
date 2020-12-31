@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { css } from "@emotion/css";
 import Button from "@material-ui/core/Button";
 
-import { useUser } from "@hooks/useUser";
+import { useUser } from "@Hooks/useUser";
 
 /*
 Presentational Component（例：Home）を見た目の表現に限定するため、

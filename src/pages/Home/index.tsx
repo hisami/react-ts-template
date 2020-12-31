@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { css } from "@emotion/css";
 import Button from "@material-ui/core/Button";
 
-const Home: React.FC = () => {
+import { useUser } from "@hooks/useUser";
+
+/*
+Presentational Component（例：Home）を見た目の表現に限定するため、
+副作用を起こすレイヤをContainer Componentに分離
+*/
+export const HomeContainer: React.FC = () => {
+  const [userList, fetchUserList] = useUser();
+
+  useEffect(() => {
+    fetchUserList();
+  }, []);
+
+  // Presentational ComponentのPropsとして渡す
+  return <Home userList={userList} />;
+};
+
+interface HomeProps {
+  userList: string[];
+}
+
+const Home: React.FC<HomeProps> = ({ userList }: HomeProps) => {
+  console.log(userList);
   return (
     <>
       <Button
@@ -23,5 +45,3 @@ const styleSample = css({
   color: "green",
   fontWeight: "bold",
 });
-
-export default Home;

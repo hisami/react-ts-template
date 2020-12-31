@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 
-import Home from "@pages/Home";
+import { HomeContainer } from "@pages/Home";
 
 ReactDOM.render(
   <RecoilRoot>
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={HomeContainer} />
       </Switch>
     </BrowserRouter>
   </RecoilRoot>,

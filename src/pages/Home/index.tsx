@@ -5,7 +5,13 @@ import Button from "@material-ui/core/Button";
 const Home: React.FC = () => {
   return (
     <>
-      <Button variant="contained" color="primary">
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => {
+          console.log("clicked");
+        }}
+      >
         Button
       </Button>
       <div className={styleSample}>This is a Home page.</div>

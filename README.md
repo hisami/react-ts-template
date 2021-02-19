@@ -14,7 +14,7 @@ yarn
 ```
 yarn dev
 ```
-→http://localhost:3000が開く
+→ http://localhost:3000 が開く
 ### ビルド
 ```
 yarn build

@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { css } from "@emotion/css";
 import Button from "@material-ui/core/Button";
 
-import { User } from "@Types/user";
-import { useUser } from "@Hooks/useUser";
+import { User } from "@/types/user";
+import { useUser } from "@/hooks/useUser";
+import { Divider } from "@material-ui/core";
 
 /*
 Presentational Component（例：Home）を見た目の表現に限定するため、
@@ -24,10 +25,12 @@ type HomeProps = {
   userList: User[];
 };
 
-const Home: React.FC<HomeProps> = ({ userList }: HomeProps) => {
-  console.log(userList);
+export const Home: React.FC<HomeProps> = ({ userList }: HomeProps) => {
   return (
     <>
+      {userList.map((user) => {
+        return <div key={user.id}>{user.name}</div>;
+      })}
       <Button
         variant="contained"
         color="primary"

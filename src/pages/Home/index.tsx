@@ -4,7 +4,6 @@ import Button from "@material-ui/core/Button";
 
 import { User } from "@/types/user";
 import { useUser } from "@/hooks/useUser";
-import { Divider } from "@material-ui/core";
 
 /*
 Presentational Component（例：Home）を見た目の表現に限定するため、
